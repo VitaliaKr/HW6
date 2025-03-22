@@ -17,19 +17,12 @@ public class Main {
         double average = 0;
         double smallest = 0;
         //todo дописать логику программы ниже.
-        if (first > second) {
-            greatest = first;
-            smallest = second;
-        } else {
-            greatest = second;
-            smallest = first;
-        }
-        if (third > greatest) {
-            greatest = third;
-        }
-        if (third < smallest) {
-            smallest = third;
-        }
+
+        greatest = first > second ? first : second;
+        smallest = first < second ? first : second;
+        greatest = greatest > third ? greatest : third;
+        smallest = smallest < third ? smallest : third;
+
         if (first != greatest && first != smallest) {
             average = first;
         } else if (second != greatest && second != smallest) {
